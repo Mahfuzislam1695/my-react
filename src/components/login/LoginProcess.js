@@ -1,14 +1,11 @@
 import React from "react";
 import {
   ForgotText,
-  Input,
-  InputLabel,
-  Line,
-  LoginContainer,
-  LoginForm,
-  LoginHeroContainer,
-  LoginLink,
-  LoginMainDiv,
+    Input,
+    InputLabel,
+    Line,
+    LoginForm,
+    LoginLink,
   LoginProcessContainer,
   LoginProcessDiv,
   LogoDiv,
@@ -25,29 +22,13 @@ import {
   WelcomeSubText,
   WelcomeText,
 } from "./Login.style";
-import LoginHero from "./LoginHero";
-import LoginProcess from "./LoginProcess";
 
-const Login = () => {
+const LoginProcess = () => {
   return (
-    <LoginMainDiv>
-      <LoginContainer>
-        <LoginHero/>
-        <LoginProcess/>
-        {/* <div>1</div> */}
-        {/* <LoginHeroContainer>
-          
-          <img style={{
-            height:"100vh",
-            width:"auto"
-          }}
-            src="https://images.unsplash.com/photo-1579451861283-a2239070aaa9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-            alt=""
-          />{" "}
-        </LoginHeroContainer> */}
-
-        {/* <LoginProcessContainer>
+    <LoginProcessContainer>  
+      
           <LoginProcessDiv>
+          
             <WelcomeDiv>
               <WelcomeText>Welcome Back!</WelcomeText>
               <WelcomeSubText>Please sign in to your account</WelcomeSubText>
@@ -66,7 +47,9 @@ const Login = () => {
               </LoginLink>
               <span />
 
-              <LoginLink
+              <LoginLink style={{
+                backgroundColor: "#60A5FA",
+              }}
                 href="https://www.behance.net/ajeeshmon"
                 target="_blank"
               >
@@ -78,7 +61,9 @@ const Login = () => {
               </LoginLink>
               <span />
 
-              <LoginLink
+              <LoginLink style={{
+                backgroundColor: "#3B82F6",
+              }}
                 href="https://www.behance.net/ajeeshmon"
                 target="_blank"
               >
@@ -97,7 +82,7 @@ const Login = () => {
               <Line></Line>
             </OrDiv>
 
-            <LoginForm action="">
+            <LoginForm>
               <input type="hidden" name="remember" value="true"></input>
               <div
                 style={{
@@ -137,7 +122,7 @@ const Login = () => {
 
               <div
                 style={{
-                  marginTop: "2rem",
+                  marginTop: "1.5rem",
                   alignContent: "center",
                 }}
               >
@@ -180,10 +165,8 @@ const Login = () => {
               </SignupText>
             </LoginForm>
           </LoginProcessDiv>
-        </LoginProcessContainer> */}
-      </LoginContainer>
-     </LoginMainDiv>
+        </LoginProcessContainer>
   );
 };
 
-export default Login;
+export default LoginProcess;
