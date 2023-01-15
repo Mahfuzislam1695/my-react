@@ -1,4 +1,5 @@
 import styled from "styled-components";
+const bg ="https://images.unsplash.com/photo-1579451861283-a2239070aaa9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
 
 export const LoginMainDiv = styled.div`
   display: flex;
@@ -7,47 +8,39 @@ export const LoginMainDiv = styled.div`
 `;
 
 export const LoginContainer = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-flex: 1 1 auto;
-min-width: 0 ;
-background-color: #ffffff;
-@media (min-width: 640px) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  background-color: #ffffff;
+  @media (min-width: 640px) {
     flex-direction: row;
     justify-content: center;
-  } 
-  @media (min-width: 768px) {
-    align-items: flex-start; 
   }
-  
+  @media (min-width: 768px) {
+    align-items: flex-start;
+  }
 `;
 export const LoginHeroContainer = styled.div`
-/* flex-grow: 4; */
-  display: none; 
+  display: none;
   height: 100%;
-  padding: 2.5rem; 
-flex: 1 1 auto; 
-justify-content: center; 
-align-items: center; 
-  /* padding: 2.5rem; */
-   /* border: 2px solid red; */
-  /* display: flex;
-  flex-grow: 4;
+  padding: 2.5rem;
+  flex: 1 1 auto;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
   overflow: hidden;
   background-color: #4c1d95;
   background-repeat: no-repeat;
-  /* color: #ffffff; */
   position: relative;
   background-size: cover;
-  /*  */
-  /* */
+  background-image: url(${bg});
+
+
   @media (min-width: 640px) {
     width: 50%;
   }
-   @media (min-width: 768px) {
+  @media (min-width: 768px) {
     display: flex;
   }
   @media (min-width: 1280px) {
@@ -55,41 +48,29 @@ align-items: center;
   }
 `;
 
-
 export const LoginProcessContainer = styled.div`
-  /* display:flex; */
-  /* border: 2px solid red; */
-  /* flex-grow: 4; */
-  /* width: 40%; */
-  /* width: 100%; */
   padding: 2rem;
-  background-color: #ffffff;  
-  /* padding: 2.5rem;  */
- 
+  background-color: #ffffff;
+
   @media (min-width: 640px) {
     width: auto;
     border-radius: 0.5rem;
-    /* width: auto;
-    border-radius: 0.5rem; */
-    /* border: 5px solid black; */
   }
 
   @media (min-width: 768px) {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%; 
+    height: 100%;
     padding: 2.5rem;
     border-radius: 0;
     width: 40%;
-
-    
   }
   @media (min-width: 1024px) {
-    padding: 3.5rem; 
+    padding: 3.5rem;
   }
   @media (min-width: 1280px) {
-    width: 40%; 
+    width: 40%;
   }
 `;
 
@@ -115,12 +96,12 @@ export const WelcomeSubText = styled.p`
   line-height: 1.25rem;
 `;
 export const LogoDiv = styled.div`
- margin-top: 2rem;
- display: flex; 
-flex-direction: row; 
-justify-content: center; 
-align-items: center;
-gap: 0.75rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
 `;
 export const LoginLink = styled.a`
   display: inline-flex;
@@ -136,30 +117,26 @@ export const LoginLink = styled.a`
   cursor: pointer;
   transition-timing-function: ease-in;
   transition-duration: 300ms;
-  /* transition-property: background-color, border-color, color, fill, stroke,
-    opacity, box-shadow, transform; */
-  /* transition-duration: 300ms; */
-  /* transition-timing-function: cubic-bezier(0.4, 0, 1, 1); */
-&:hover{
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
+  &:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
 `;
 export const OrDiv = styled.div`
   display: flex;
   margin-left: 0.5rem;
-   margin-top: 2rem;
+  margin-top: 2rem;
   justify-content: center;
   align-items: center;
 `;
 export const Line = styled.span`
-  background-color: #E5E7EB; 
-width: 4rem; 
-height: 1px; 
+  background-color: #e5e7eb;
+  width: 4rem;
+  height: 1px;
 `;
 export const OrText = styled.span`
-color: #D1D5DB; 
-font-weight: 500; 
+  color: #d1d5db;
+  font-weight: 500;
 `;
 export const LoginForm = styled.form`
   margin-top: 2rem;
@@ -246,34 +223,59 @@ export const InputLabel = styled.label`
   letter-spacing: 0.025em;
 `;
 export const Input = styled.input`
-
   width: 100%;
   font-size: 1rem;
-line-height: 1.5rem;
-padding: 0.5rem 1rem; 
-border-bottom-width: 1px; 
-border-color: #D1D5DB;
-border-radius: 1rem;
-border-top:none;
-border-left: none;
-border-right: none;
-&:focus {
-    outline: 0;
-    border-color: #6366F1; 
-  }  
-  /* margin-top: .25rem;
-  align-content: center;
-  width: 100%;
-  font-size: 1rem;
-line-height: 1.5rem;
-padding: 0.5rem 1rem;
-border-bottom-width: 1px;
-border-radius: 1rem; 
-border-color: #D1D5DB;
-
-
+  line-height: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-bottom-width: 1px;
+  border-color: #d1d5db;
+  border-radius: 1rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
   &:focus {
     outline: 0;
-    border-color: #6366F1; 
-  } */
+    border-color: #6366f1;
+  }
+`;
+
+export const HeadingDiv = styled.div`
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color:#FFFFFF;
+
+  @media (min-width: 640px) {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 3rem;
+    line-height: 1;
+  }
+`;
+export const HeadingSubDiv = styled.div`
+  color: #E5E7EB; 
+font-weight: 400; 
+
+  @media (min-width: 640px) {
+    font-size: 0.875rem;
+line-height: 1.25rem; 
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 1rem;
+line-height: 1.25rem;
+  }
+`;
+export const EmptyDiv = styled.div`
+ position: absolute; 
+top: 0;
+right: 0;
+bottom: 0;
+left: 0; 
+z-index: 0;
+background-image: linear-gradient(to bottom,  #4F46E5,  #3B82F6); 
+opacity: 0.75; 
 `;
